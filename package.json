@@ -1,14 +1,12 @@
 {
-  "version": "0.1.1",
+  "name": "@lokibai/tiny-storage",
+  "version": "0.1.2",
+  "author": "@uniquexiaobai",
+  "repository": "https://github.com/uniquexiaobai/tiny-storage",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
+  "module": "dist/tiny-storage.esm.js",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -16,7 +14,12 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
-  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -28,9 +31,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@lokibai/tiny-storage",
-  "author": "uniquexiaobai",
-  "module": "dist/tiny-storage.esm.js",
+  "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "husky": "^4.2.5",
