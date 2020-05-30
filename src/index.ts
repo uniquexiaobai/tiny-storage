@@ -15,9 +15,13 @@ const get = (key: string) => {
   return store.data;
 };
 
-const set = (key: string, value: any, options = { maxAge: 0 }) => {
+type Options = {
+  maxAge: number;
+};
+
+const set = (key: string, value: any, options: Options = { maxAge: 0 }) => {
   const now = Date.now();
-  const expires = options.maxAge > 0 ? now + options.maxAge : 0;
+  const expires = options.maxAge > 0 ? now + options.maxAge * 1000 : 0;
   const store = JSON.stringify({
     data: value,
     expires,

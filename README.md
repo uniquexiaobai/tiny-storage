@@ -16,9 +16,9 @@ import tinyStorage from '@lokibai/tiny-storage';
 
 tinyStorage.get('a', 1);
 tinyStorage.set('b', { x: 2 });
-tinyStorage.set('c', 3, { maxAge: 1000 * 60 }); // expires after 1 minute
+tinyStorage.set('c', 3, { maxAge: 60 }); // expires after 1 minute
 
-tinyStorage.get('a'); // output 1
+tinyStorage.get('a'); // output: 1
 
 tinyStorage.remove('a');
 ```
