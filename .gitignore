@@ -1,0 +1,7 @@
+*.log
+.DS_Store
+node_modules
+dist
+test/node_modules
+test/dist
+test/.cache
